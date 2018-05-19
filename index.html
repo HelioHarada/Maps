@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      var map;
+      function initMap() {
+        
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 13,
+          center: {lat: -22.212357, lng: -49.949923},
+        });
+
+        var coop = {lat:-22.212357, lng: -49.949923};
+        var samp = {lat: -22.212904, lng: -49.950859}
+
+      var marker = new google.maps.Marker({
+        position: coop,
+        map: map,
+        title: 'Hello World!'
+      });
+
+      }
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCauz4XXJOvGlY6DEOu7EOoT2f_q79CaN0&callback=initMap">
+    </script>
+  </body>
+</html>
